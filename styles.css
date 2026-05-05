@@ -1,0 +1,110 @@
+:root {
+  --yellow: hsl(47, 88%, 63%);
+
+  --white: hsl(0, 0%, 100%);
+
+  --gray-500: hsl(0, 0%, 42%);
+  --gray-950: hsl(0, 0%, 7%);
+}
+
+* {
+  font-family: "Figtree", sans-serif;
+}
+
+body {
+  background-color: var(--yellow);
+}
+
+.container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  background-color: var(--white);
+  width: 20rem;
+  padding: 15px;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 15px;
+  border: black solid 1px;
+  box-shadow: 5px 5px 0px 0px rgba(0, 0, 0, 1);
+
+  transition-property: box-shadow, translate;
+  transition-duration: 0.2s;
+  transition-timing-function: ease-in;
+}
+
+.card-image {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.category {
+  background-color: var(--yellow);
+  padding: 5px 10px;
+  border-radius: 5px;
+  width: fit-content;
+  height: fit-content;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.published-date {
+  color: var(--gray-950);
+  font-size: 12px;
+  font-weight: 500;
+}
+
+h1 {
+  color: var(--gray-950);
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+h1:hover {
+  color: var(--yellow);
+  cursor: pointer;
+}
+
+.card-description {
+  color: var(--gray-500);
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: 500;
+}
+
+.card-footer {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.author {
+  color: var(--gray-950);
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.avatar {
+  width: 30px;
+  height: 30px;
+}
+
+.card:has(h1:hover) {
+  translate: -10px -10px;
+  box-shadow: 10px 10px 10px 5px rgba(0, 0, 0, 0.7);
+}
+
+.attribution {
+  font-size: 0.6875rem;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
